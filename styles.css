@@ -1,0 +1,108 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+	margin-left: 30px;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #333;
+    padding: 15px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+nav .brand-logo {
+    color: #fff;
+    font-size: 1.8em;
+    font-weight: bold;
+    display: inline-block;
+    margin-right: 30px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 14px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+/* Flex Container for Profile and About Sections */
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    margin-top: 70px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+/* Profile and About Section Styling */
+#profile, #about {
+    width: 45%;
+}
+
+#profile img {
+    display: block;
+    margin: 0 auto;
+    border: 3px solid #333;
+}
+
+/* Assignments Grid Styling */
+.assignments-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    background-color: #fff;
+    transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card .completion {
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .flex-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #profile, #about {
+        width: 100%;
+    }
+
+    .assignments-grid {
+        grid-template-columns: 1fr;
+    }
+}
